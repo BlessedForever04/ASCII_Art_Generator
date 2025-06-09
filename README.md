@@ -4,18 +4,18 @@
 
 <h2>You might wonder, how it works?</h2>
 <h3>Well, first you have to understand how images works, images are stored in comupters in 3 layered 2d grid/array, each layer representing RGB (Red, Green, Blue) color intensity</h3>
-![3layers](https://github.com/user-attachments/assets/429f0081-0ea8-42f2-9d63-81c094ddbab5)
+https://github.com/user-attachments/assets/429f0081-0ea8-42f2-9d63-81c094ddbab5
 <h3>This is how images are stored in computer.</h3>
 
 <h3>As images are stored in grid, their index represent pixels in image</h3>
-![pixelimage](https://github.com/user-attachments/assets/723d9233-70ed-4cb7-a2ca-6313dc08fec7)
+https://github.com/user-attachments/assets/723d9233-70ed-4cb7-a2ca-6313dc08fec7
 
 <h2>Technical information</h2>
 <h3>Now you know how images are stored in computers, and this is what I used for creating ASCII Art.</h3>
 <h3>Here images are of 2 types, colored which contain 3 layers i.e RGB and another is Grayscale i.e Black and white image</h3>
 <h3>Grayscale image's index hold the curresponding brightness intensity of that pixel in UINT8 format ranging from 0 to 255, 0 being the lowest brightness and 255 being highest brightness.</h3>
 <h3>As brightness and complete picture is available in indices (image[100][100]) and their brightness value ranging from 0 to 255, using numpy we can configure these parameteres leading to image manipulation, in my code I have also reduced the brightness of image with 50 for better contrasted result, these can be adjusted accordingly</h3>
-```python
+```
 image = cv.imread(input_path, cv.IMREAD_GRAYSCALE)
 image = image.astype(np.int16) - 50
 image = np.clip(image, 0, 255)
@@ -29,23 +29,23 @@ image = image.astype(np.uint8)
 
 <h2>How program works</h2>
 <h3>Reading image using OpenCV</h3>
-```python
+```
 image = cv.imread(input_path, cv.IMREAD_GRAYSCALE)
 ```
 <h3>then adjusting brightness according to the tase</h3>
-```python
+```
 image = image.astype(np.int16) - 50
 image = np.clip(image, 0, 255)
 image = image.astype(np.uint8)
 ```
 <h3>Creating complete black image same as the size of provided image</h3>
-```python
+```
 (height, width) = image.shape
 new_image = np.zeros((height, width), dtype = np.uint8)
 ```
 
 <h3>Main priting of characters on new image</h3>
-```python
+```
 for y in range(0, height, char_h): #skipped by char_h as height of a character
         for x in range(0, width, char_w): #skipped by char_w as width of a character
             brightness = image[y, x] #brightness intensity of image at (x, y)(y - height index, x - width index)
@@ -61,7 +61,7 @@ for y in range(0, height, char_h): #skipped by char_h as height of a character
                        lineType=cv.LINE_AA) #parameter the determines how edges are rendered (LINE_AA = Auto Aliasing)
 ```
 <h3>brightness2ascii() function</h3>
-```python
+```
 def brightness2ascii(brightness):
     character_index = int((brightness/255) * (len(ASCII_CHARS) - 1))
     return ASCII_CHARS[character_index]
