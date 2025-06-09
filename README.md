@@ -88,14 +88,14 @@ pip install numpy
 pip install opencv-python
 ```
 Instruction:
-Use higher resolution images (4k+) captured from high end devices. (Higher the resolution, higher will be the quality)
-Enter extension and image name correctly.
-Using large size of image (size > 30Mb) might slow down the process as it takes time, so keep the patience.
-Avoid photos with low contrast or higher brightness.
+Use higher resolution images (4k+) captured from high end devices. (Higher the resolution, higher will be the quality) <br>
+Enter extension and image name correctly.<br>
+Using large size of image (size > 30Mb) might slow down the process as it takes time, so keep the patience.<br>
+Avoid photos with low contrast or higher brightness.<br>
 
-Get Going:
-Clone this repo in your local machine, paste some images in the same directory as main.py, run main.py and enter the name of image with extension and boom, you got your own ASCII Art generated!!
-You can also enter the path of image where it is stored for generating ASCII art, ASCII art will be generated in the current directory of main.py.
+Get Going:<br>
+Clone this repo in your local machine, paste some images in the same directory as main.py, run main.py and enter the name of image with extension and boom, you got your own ASCII Art generated!!<br>
+You can also enter the path of image where it is stored for generating ASCII art, ASCII art will be generated in the current directory of main.py.<br>
 
 <h2>Sources:</h2>
 OpenCV documentation - Python<br>
