@@ -3,18 +3,18 @@
 ASCII_ART_Generator is a program that generates ASCII Arts from given images.
 
 <h2>You might wonder, how it works?</h2>
-Well, first you have to understand how images works, images are stored in comupters in 3 layered 2d grid/array, each layer representing RGB (Red, Green, Blue) color intensity
-https://github.com/user-attachments/assets/429f0081-0ea8-42f2-9d63-81c094ddbab5
-This is how images are stored in computer.
+Well, first you have to understand how images works, images are stored in comupters in 3 layered 2d grid/array, each layer representing RGB (Red, Green, Blue) color intensity <br>
+https://github.com/user-attachments/assets/429f0081-0ea8-42f2-9d63-81c094ddbab5 <br>
+This is how images are stored in computer. <br>
 
-As images are stored in grid, their index represent pixels in image
+As images are stored in grid, their index represent pixels in image<br>
 https://github.com/user-attachments/assets/723d9233-70ed-4cb7-a2ca-6313dc08fec7
 
 <h2>Technical information</h2>
-Now you know how images are stored in computers, and this is what I used for creating ASCII Art.
-Here images are of 2 types, colored which contain 3 layers i.e RGB and another is Grayscale i.e Black and white image
-Grayscale image's index hold the curresponding brightness intensity of that pixel in UINT8 format ranging from 0 to 255, 0 being the lowest brightness and 255 being highest brightness.
-As brightness and complete picture is available in indices (image[100][100]) and their brightness value ranging from 0 to 255, using numpy we can configure these parameteres leading to image manipulation, in my code I have also reduced the brightness of image with 50 for better contrasted result, these can be adjusted accordingly
+Now you know how images are stored in computers, and this is what I used for creating ASCII Art.<br>
+Here images are of 2 types, colored which contain 3 layers i.e RGB and another is Grayscale i.e Black and white image<br>
+Grayscale image's index hold the curresponding brightness intensity of that pixel in UINT8 format ranging from 0 to 255, 0 being the lowest brightness and 255 being highest brightness.<br>
+As brightness and complete picture is available in indices (image[100][100]) and their brightness value ranging from 0 to 255, using numpy we can configure these parameteres leading to image manipulation, in my code I have also reduced the brightness of image with 50 for better contrasted result, these can be adjusted accordingly<br>
 
 ```
 image = cv.imread(input_path, cv.IMREAD_GRAYSCALE)
@@ -22,11 +22,11 @@ image = image.astype(np.int16) - 50
 image = np.clip(image, 0, 255)
 image = image.astype(np.uint8)
 ```
-Here image is in UINT8 format, for manipulating values and to avoid overflow or underflow within range 0 and 255, we first convert it to INT16 increasing the range for manipulation and then clipping it for the desired range.
-For creating ASCII Art, we can simply replace pixels with Ascii characters (Higher brightness intensity can be represented with dense and bigger AScii characters such as "@", "#", "$" etc and lower can be represented as ".", "'", "," etc
-To represent the gradient of brightness within image, we would need more character
-List of characters: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`'. "
-Now these characters are assigned to respective brightness intensity and then is printed on image and then saved
+Here image is in UINT8 format, for manipulating values and to avoid overflow or underflow within range 0 and 255, we first convert it to INT16 increasing the range for manipulation and then clipping it for the desired range.<br>
+For creating ASCII Art, we can simply replace pixels with Ascii characters (Higher brightness intensity can be represented with dense and bigger AScii characters such as "@", "#", "$" etc and lower can be represented as ".", "'", "," etc<br>
+To represent the gradient of brightness within image, we would need more character<br>
+List of characters: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`'. "<br>
+Now these characters are assigned to respective brightness intensity and then is printed on image and then saved<br>
 
 <h2>How program works</h2>
 Reading image using OpenCV
@@ -75,7 +75,7 @@ def brightness2ascii(brightness):
 It calculates the index of ascii character and returns the character
 
 <h2>Sources:</h2>
-OpenCV documentation - Python
-https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
-Numpy Documentation
+OpenCV documentation - Python<br>
+https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html<br>
+Numpy Documentation<br>
 https://numpy.org/doc/
