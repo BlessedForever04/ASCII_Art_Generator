@@ -80,6 +80,23 @@ def brightness2ascii(brightness):
 ```
 It calculates the index of ascii character and returns the character
 
+<h2>How to use it</h2>
+First you would need python installed in your machine and dependencies (Numpy, OpenCV) installed
+
+```
+pip install numpy
+pip install opencv-python
+```
+Instruction:
+Use higher resolution images (4k+) captured from high end devices. (Higher the resolution, higher will be the quality)
+Enter extension and image name correctly.
+Using large size of image (size > 30Mb) might slow down the process as it takes time, so keep the patience.
+Avoid photos with low contrast or higher brightness.
+
+Get Going:
+Clone this repo in your local machine, paste some images in the same directory as main.py, run main.py and enter the name of image with extension and boom, you got your own ASCII Art generated!!
+You can also enter the path of image where it is stored for generating ASCII art, ASCII art will be generated in the current directory of main.py.
+
 <h2>Sources:</h2>
 OpenCV documentation - Python<br>
 https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html<br>
