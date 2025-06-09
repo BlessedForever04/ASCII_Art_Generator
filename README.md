@@ -102,3 +102,5 @@ OpenCV documentation - Python<br>
 https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html<br>
 Numpy Documentation<br>
 https://numpy.org/doc/
+
+<h2>Thanks for reading through, update any information or mistakes, happy coding and happy learning!</h2>
