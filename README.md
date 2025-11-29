@@ -13,7 +13,7 @@ This is how images are stored in computer. <br>
 
 ![pixelimage](https://github.com/user-attachments/assets/90306d8f-e8a0-4e5e-96a2-e8e92f2f3526)
 
-As images are stored in grid, their index represent pixels in image<br>
+As images are stored in grid, their indices represent pixels in image<br>
 
 <br>
 <h2>Technical information</h2>
