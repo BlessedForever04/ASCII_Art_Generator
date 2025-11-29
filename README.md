@@ -46,7 +46,7 @@ Reading image using OpenCV
 ```
 image = cv.imread(input_path, cv.IMREAD_GRAYSCALE)
 ```
-then adjusting brightness according to the tase
+then adjusting brightness according to the taste.
 
 ```
 image = image.astype(np.int16) - 50
@@ -60,7 +60,7 @@ Creating complete black image same as the size of provided image
 new_image = np.zeros((height, width), dtype = np.uint8)
 ```
 
-Main priting of characters on new image
+Main printing of characters on new image
 
 ```
 for y in range(0, height, char_h): #skipped by char_h as height of a character
@@ -94,7 +94,7 @@ pip install numpy
 pip install opencv-python
 ```
 Instruction:
-Use higher resolution images (4k+) captured from high end devices. (Higher the resolution, higher will be the quality) <br>
+Use higher resolution images (4k+) captured from high end devices. (Higher the resolution, better will be the quality) <br>
 Enter extension and image name correctly.<br>
 Using large size of image (size > 30Mb) might slow down the process as it takes time, so keep the patience.<br>
 Avoid photos with low contrast or higher brightness.<br>
