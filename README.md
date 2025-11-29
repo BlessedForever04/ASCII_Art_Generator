@@ -13,7 +13,13 @@ This is how images are stored in computer. <br>
 
 ![pixelimage](https://github.com/user-attachments/assets/90306d8f-e8a0-4e5e-96a2-e8e92f2f3526)
 
-As images are stored in grid, their indices represent pixels in image<br>
+As images are stored in grid, their indices represent pixels in an image<br>
+
+Now lets try to understand how grayscale (black & white) images are stored in computer, these can be stored and understood easily, no complex 3 layered architectured.
+
+![GrayscaleImage](https://imgs.search.brave.com/kzt7KYtewhInenC0RrtW2vDU3Dq-9JJHlt2re1QBItA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YW5hbHl0aWNzdmlk/aHlhLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMS8wMy9T/Y3JlZW5zaG90LWZy/b20tMjAyMS0wMy0x/Ni0xMC01OC0wOC5w/bmc)
+
+The above image demonstrates how grayscale images are stored in computers, each pixel is an element stored in a 2D array, representing the brightness intensity of that pixel (from 0 to 225).
 
 <br>
 <h2>Technical information</h2>
